@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mp 
 import math
+from astropy import constants as cte
 N=10
 errores=[]
 Enes=[]
@@ -58,10 +59,13 @@ while(error>(10e-6)):
     error=np.fabs(integral_tot-((np.pi**4)/15.0))
     Enes.append(n)
     N+=1
-    print(error)
+    #print(error)
     errores.append(error)
-print(integral_tot)
-print(error)
+T=2725
+P=(2*cte.h/(cte.c**2))*((cte.k_B*T/cte.h)**4)*integral_tot
+print('valor: '+str(P))
+#print(integral_tot)
+#print(error)
 plt.plot(Enes,errores)
 plt.yscale('log')
 plt.show()
