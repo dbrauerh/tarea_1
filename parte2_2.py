@@ -74,3 +74,6 @@ plt.ylabel('Error')
 plt.title('Error de integral de frecuencia usando metodo de Simpson \n mas metodo de rectangulos en los bordes')
 plt.yscale('log')
 plt.show()
+#calculando la T con el resultado que nos da en la parte 3, obtenemos:
+T=np.sqrt(np.sqrt(938989.8*(cte.c**2)/(2*cte.h*integral_tot)))*(cte.h/cte.k_B)
+print('Temperatura obtenida: '+str(T))

@@ -8,7 +8,7 @@ columna1=[]
 columna2=[]
 a=archivo.readlines()
 for linea in a:
-    columna1.append((cte.c)*float(linea[1:5]))
+    columna1.append(300*float(linea[1:5]))
     columna2.append(float(linea[9:15]))
 
 area=0
